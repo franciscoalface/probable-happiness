@@ -16,9 +16,9 @@ app.get("/", async (req, res) => {
   connection.query(sql);
   connection.query("SELECT * FROM people", (err, response) => {
     res.send(
-      `<h1>Full Cycle Rocks</h1> <br> <h2>${response.map(
-        (user) => `${user.name}`
-      )}</h2>`
+      `<h1>Full Cycle Rocks!</h1><br><h3>${response.map(
+        (user) => ` ${user.name}`
+      )}</h3>`
     );
   });
 
